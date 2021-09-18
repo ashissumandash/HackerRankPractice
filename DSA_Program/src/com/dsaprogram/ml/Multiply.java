@@ -1,5 +1,8 @@
 package com.dsaprogram.ml;
-import java.util.*
+
+import java.util.*;
+
+
 
 public class Multiply {
 	
