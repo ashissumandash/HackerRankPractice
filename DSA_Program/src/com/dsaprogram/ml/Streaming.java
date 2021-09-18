@@ -1,3 +1,5 @@
+//Sample program HackerRank
+
 package com.dsaprogram.ml;
 
 import java.util.*;
