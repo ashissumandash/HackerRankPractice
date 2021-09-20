@@ -24,6 +24,9 @@ public class looppractice1 {
 			//len=len-1;
 		}
 		System.out.print("\n");
+		
+		
+		
 	}
 
 }
