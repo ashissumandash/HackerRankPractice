@@ -6,13 +6,20 @@ public class loop1 {
 	public static void main(String[] args)
 	{
 			Scanner sc=new Scanner (System.in);
-			int number=sc.nextInt();
-			int result;
+			int sample=sc.nextInt();
+			String[] arr=new String[sample+1];
+
 			
-			for(int i=1;i<=10;i++)
+			for(int i=0;i<arr.length;i++)
 			{
-				result=number*i;
-				System.out.printf("%d x %d = %d%n",number,i,result);
+				arr[i]=sc.nextLine();
+				System.out.println("Enter nth string value: "+i);
+				
+			}
+			
+			for(int j=0;j<arr.length;j++){
+				
+				System.out.println(arr[j]);
 			}
 			
 	}

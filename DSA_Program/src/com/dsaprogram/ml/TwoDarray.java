@@ -1,41 +1,34 @@
 package com.dsaprogram.ml;
-import java.util.Scanner;
+
+import java.io.*;
+import java.util.*;
 
 public class TwoDarray {
-	
-	public static void main(String[] args){
-		
-		int[][] arr=new int[3][3];
-		Scanner sc=new Scanner(System.in);
-		
-		try{
-		for(int i=0;i<3;i++)
-		{
-			for(int j=0;j<3;j++)
-			{
-				System.out.print("Enter number to array: ");
-				arr[i][j]=sc.nextInt();
-			}
-			System.out.println();
-		}
-		}
-		catch(Exception e){
-			System.out.println("Please Enter only interger");
-		}
-		
-			
-		System.out.println("Output of 2D array: ");
-		for(int i=0;i<3;i++)
-		{
-			for(int j=0;j<3;j++)
-			{
-				System.out.print(arr[i][j]+ " ");
-			}
-			System.out.println();
-		}
-		
-	}
-	
-	
 
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int q = in.nextInt();
+        List<Integer>[] sequences = new List[n];
+        for (int n_i = 0; n_i < n; n_i++) {
+            sequences[n_i] = new ArrayList<>();
+        }
+        int lastans = 0;
+        for (int i = 0; i < q; i++) {
+            int t = in.nextInt();
+            int x = in.nextInt();
+            int y = in.nextInt();
+            List<Integer> sequence = sequences[(x^lastans)%n];
+            switch (t) {
+                case 1:
+                    sequence.add(y);
+                    break;
+                case 2:
+                    lastans = sequence.get(y%sequence.size());
+                    System.out.println(lastans);
+                    break;
+            }
+        }
+    }
 }
